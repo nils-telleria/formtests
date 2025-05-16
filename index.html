@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Autocomplete Test</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    form { max-width: 350px; margin: auto; }
+    label { display: block; margin-top: 1em; }
+    input[type="submit"] { margin-top: 1.5em; }
+    .note { font-size: 0.95em; color: #555; margin-top: 2em; }
+  </style>
+</head>
+<body>
+  <h1>Password Autocomplete Test</h1>
+  <form id="login-form">
+    <label>
+      Username:
+      <input type="text" name="username" autocomplete="username" required>
+    </label>
+    <label>
+      Password (current):
+      <input type="password" name="current-password" autocomplete="current-password">
+    </label>
+    <label>
+      Password (blank?):
+      <input type="password" name="other-password">
+    </label>
+    <label>
+      Password (off?):
+      <input type="password" name="other-password" autocomplete="off">
+    </label>
+    <label>
+      Password (new):
+      <input type="password" name="new-password" autocomplete="new-password">
+    </label>
+    <input type="submit" value="Submit">
+  </form>
+  <div class="note">
+    <p>Use this form to test how your browser handles the <code>autocomplete</code> attribute for password fields.<br>
+    Try saving and updating passwords to observe browser behavior.</p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
